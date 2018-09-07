@@ -1,0 +1,24 @@
+body {
+  background-color: #ebebeb;
+}
+
+#bg {
+  position: relative;
+  width: 578px;
+  height: 655px;
+  margin: 0 auto;
+}
+
+
+
+#content {
+  position: absolute;
+  z-index: 2;
+  top: 90px;
+  left: 156px;
+  width: 270px;
+  height: 478px;
+}
+#notificationBar{
+  background-color:#f0f0f0;
+}

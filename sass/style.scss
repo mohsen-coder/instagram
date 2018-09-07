@@ -1,0 +1,752 @@
+$notificationBarBgColor : #f0f0f0;
+$notificationBarFont : 'Roboto',
+sans-serif;
+$instaText : 'Pacifico',
+sans-serif;
+$instagramHeaderBgColor: #fafafa;
+
+// ==========================> Animations
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+// ==========================> End Animations
+body {
+  background-color: #ebebeb;
+}
+
+#bg {
+  position: relative;
+  width: 578px;
+  height: 655px;
+  margin: 0 auto;
+
+  #iphone {
+    position: absolute;
+
+    #content {
+      position: absolute;
+      z-index: 2;
+      top: 90px;
+      left: 156px;
+      width: 270px;
+      height: 478px;
+
+      //==================> NotificationBar
+      #notificationBar {
+        background-color: $notificationBarBgColor;
+        font-family: $notificationBarFont;
+        font-size: 12px;
+        padding: 2px 5px;
+
+        .left {
+          float: left;
+
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              float: left;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .center {
+          float: left;
+          margin-left: 55px;
+        }
+
+        .right {
+          float: right;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+
+      //==================> End NotificationBar
+      //==================> Instagram Header
+      #instagramHeader {
+        background-color: $instagramHeaderBgColor;
+        box-shadow: 0 2px 2px #dedede;
+
+        #camera {
+          float: left;
+          width: 30px;
+          margin: 10px;
+        }
+
+        #instagramText {
+          float: left;
+          font-family: $instaText;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        #directLogo {
+          float: right;
+          width: 30px;
+          margin: 10px;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+
+      //==================> End Instagram Header
+      //==================> Instagram Stories
+      #instagramStories {
+        overflow: hidden;
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 1000px;
+
+          li {
+            position: relative;
+            float: left;
+            margin-left: 9px;
+            margin-top: 8px;
+
+            &:nth-child(1) {
+              .avatar {
+                border: 0;
+              }
+            }
+
+            .avatar {
+              width: 55px;
+              border-radius: 100%;
+              border: 2px #cf1278 solid;
+
+              img {
+                border-radius: 100%;
+              }
+
+              .add {
+                position: absolute;
+                bottom: 14px;
+                right: 4px;
+                color: #3e92e8;
+                font-size: 18px;
+              }
+            }
+
+            .name {
+              font-family: $notificationBarFont;
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+
+        &:after {
+          content: '';
+          background-color: #f1f1f1;
+          height: 1px;
+          margin-top: 5px;
+          display: block;
+          clear: both;
+        }
+      }
+
+      //==================> End Instagram Stories
+      //==================> Instagram Posts
+      #posts {
+        height: 272px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .post {
+          position: relative;
+
+          .title {
+            .avatar {
+              float: left;
+              width: 35px;
+              margin: 5px;
+              cursor: pointer;
+
+              img {
+                border-radius: 100%;
+              }
+            }
+
+            .pageName {
+              font-family: $notificationBarFont;
+              font-size: 14px;
+              float: left;
+              font-weight: bold;
+              margin-top: 10px;
+              margin-left: 5px;
+              cursor: pointer;
+            }
+
+            .menuBtn {
+              float: right;
+              margin: 10px 10px 5px 5px;
+              cursor: pointer;
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+          }
+
+          .pContent {
+            position: relative;
+            cursor: pointer;
+
+            .postLikeIcon {
+              position: absolute;
+              top: 110px;
+              left: 110px;
+              display: none;
+            }
+
+            .scale-up-center {
+              -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              display: block !important;
+            }
+          }
+
+          .underContent {
+            .btns {
+              .like {
+                float: left;
+                width: 25px;
+                margin: 5px;
+                cursor: pointer;
+              }
+
+              .scale-up-center {
+                -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              }
+
+              .comments {
+                float: left;
+                width: 25px;
+                margin: 5px;
+              }
+
+              .forward {
+                float: left;
+                width: 25px;
+                margin: 5px;
+              }
+
+              .saveToCollection {
+                float: right;
+                width: 25px;
+                margin: 5px;
+              }
+
+              &:after {
+                content: '';
+                display: block;
+                clear: both;
+              }
+            }
+
+            .content {
+              padding: 5px;
+              font-family: $notificationBarFont;
+              font-size: 14px;
+
+              .likesCount {
+                font-weight: bold;
+              }
+
+              .pageName {
+                font-weight: bold;
+                display: inline;
+              }
+
+              .text {
+                display: inline;
+              }
+
+              .viewComments {
+                color: #a8a8a8;
+                // font-weight: bold;
+                font-size: 14px;
+                cursor: pointer;
+              }
+
+              .someComments {
+                ul {
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+
+                  li {
+                    width: 100%;
+
+                    .userName {
+                      display: inline;
+                      font-weight: bold;
+                      font-size: 14px;
+                    }
+
+                    .comment {
+                      font-size: 14px;
+                      display: inline;
+
+                      span {
+                        color: #3395f0;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .time {
+                color: #a8a8a8;
+                font-size: 10px;
+
+                span {
+                  color: #000;
+                }
+              }
+            }
+          }
+          .coments{
+            display: none;
+          }
+        }
+
+        // =====> Post Menu Options
+        /* #postMenuOptionsBg{
+          background-color: rgba(0,0,0,.4);
+          position: absolute;
+          z-index: 2;
+        }
+        #postMenuOptions{
+          background-color: #fff;
+          border-radius: 5px;
+          position: absolute;
+          z-index: 3;
+          min-width: 230px;
+          ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+              font-family: $notificationBarFont;
+              font-size: 16px;
+              padding: 5px 10px;
+              &:hover{
+                background-color: #e0e0e0;
+              }
+            }
+          }
+        } */
+      }
+
+      //==================> End Instagram Posts
+      // ==================> All Comments
+      #allComments {
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        background-color: #fff;
+        top: 77px;
+        z-index: 3;
+        display: none;
+
+        .postContent {
+          margin-top: 6px;
+          font-family: $notificationBarFont;
+          font-size: 14px;
+
+          .avatar {
+            float: left;
+            width: 50px;
+            margin-left: 7px;
+
+            img {
+              border-radius: 100%;
+              border: 1px #7b7b7b solid;
+            }
+          }
+
+          .content {
+            float: right;
+            width: 213px;
+            padding-left: 10px;
+
+            .pageName {
+              font-weight: bold;
+              display: inline;
+            }
+
+            .text {
+              display: inline;
+            }
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+
+        hr {
+          margin: 3px 0;
+        }
+
+        .comentItems {
+          overflow-y: scroll;
+          height: 275px;
+
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              margin-top: 10px;
+
+              .userAvatar {
+                float: left;
+                width: 40px;
+                margin-top: 8px;
+                margin-left: 8px;
+
+                img {
+                  border-radius: 100%;
+                  border: 1px #7b7b7b solid;
+                }
+              }
+
+              .comentContent {
+                position: relative;
+                float: left;
+                padding-left: 10px;
+                width: 222px;
+                font-size: 13px;
+                padding-right: 22px;
+
+                .userName {
+                  font-weight: bold;
+                  display: inline;
+                }
+
+                .comment {
+                  display: inline;
+
+                  span {
+                    color: #3e92e8;
+                  }
+                }
+
+                .like {
+                  float: right;
+                  position: absolute;
+                  top: 15px;
+                  right: 8px;
+                  cursor: pointer;
+                }
+
+                .option {
+                  color: #7b7b7b;
+                  font-size: 12px;
+
+                  .time {
+                    display: inline;
+                  }
+                  .d-comments{
+                    display: none;
+                  }
+                  .likes {
+                    display: inline;
+                    font-weight: bold;
+                    margin-left: 10px;
+                  }
+
+                  .reply {
+                    display: inline;
+                    font-weight: bold;
+                    margin-left: 10px;
+                  }
+                }
+
+                .subCommentsText {
+                  font-family: $notificationBarFont;
+                  font-size: 12px;
+                  color: #7b7b7b;
+                  margin-top: 7px;
+                  cursor: pointer;
+                  display: none;
+
+                  &::before {
+                    content: '';
+                    height: 1px;
+                    width: 20px;
+                    background-color: #7b7b7b;
+                    float: left;
+                    margin: 9px 5px 0 0;
+                  }
+                }
+
+                &:after {
+                  content: '';
+                  display: block;
+                  clear: both;
+                }
+              }
+
+              .subComments {
+                &::before {
+                  content: '';
+                  display: block;
+                  clear: both;
+                }
+
+                display: block;
+
+                ul {
+                  list-style: none;
+                  margin: 0 0 0 50px;
+                  padding: 0;
+
+                  li {
+                    margin-top: 10px;
+
+                    .userAvatar {
+                      float: left;
+                      width: 35px;
+                      margin: 0;
+
+                      img {
+                        border-radius: 100%;
+                        border: 1px #7b7b7b solid;
+                      }
+                    }
+
+                    .comentContent {
+                      position: relative;
+                      float: left;
+                      padding-left: 10px;
+                      width: 185px;
+                      font-size: 13px;
+                      padding-right: 22px;
+
+                      .userName {
+                        font-weight: bold;
+                        display: inline;
+                      }
+
+                      .comment {
+                        display: inline;
+
+                        span {
+                          color: #3e92e8;
+                        }
+                      }
+
+                      .like {
+                        float: right;
+                        position: absolute;
+                        top: 15px;
+                        right: 8px;
+                      }
+
+                      .option {
+                        color: #7b7b7b;
+                        font-size: 12px;
+                        .d-comments{
+                          display: none;
+                        }
+
+                        .time {
+                          display: inline;
+                        }
+
+                        .likes {
+                          display: inline;
+                          font-weight: bold;
+                          margin-left: 10px;
+                        }
+
+                        .reply {
+                          display: inline;
+                          font-weight: bold;
+                          margin-left: 10px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:after {
+                content: '';
+                display: block;
+                clear: both;
+              }
+            }
+          }
+        }
+
+        #addComment {
+          border-top: 1px #a8a8a8 solid;
+          height: 50px;
+
+          .userAvatar {
+            float: left;
+            margin: 10px 5px 5px 15px;
+            width: 30px;
+
+            img {
+              border-radius: 100%;
+              border: 1px #7b7b7b solid;
+            }
+          }
+
+          input[type=text] {
+            width: 215px;
+            margin: 5px 5px 0 0;
+            height: 40px;
+            border: 0;
+            float: right;
+            font-size: 12px;
+            padding: 0 5px;
+
+            &:focus {
+              border: 0;
+            }
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+      }
+
+      // ==================> End All Comments
+      //==================> Post Menu Options
+      #postMenuOptionsBg {
+        background-color: rgba(0, 0, 0, .4);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 100%;
+        height: 434px;
+        display: none;
+      }
+
+      #postMenuOptions {
+        background-color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 3;
+        min-width: 230px;
+        top: 143px;
+        left: 20px;
+        display: none;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            font-family: $notificationBarFont;
+            font-size: 16px;
+            padding: 5px 10px;
+
+            &:hover {
+              background-color: #e0e0e0;
+            }
+          }
+        }
+      }
+
+      //==================> End Post Menu Options
+      //==================> Instagram Bottom Menu
+      #instagramBottomMenu {
+        position: absolute;
+        bottom: 0;
+        box-shadow: 0 -2px 2px #dedede;
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 7px 0;
+
+          li {
+            float: left;
+            width: 30px;
+            margin: 0 12px;
+          }
+
+          #profile {
+            width: 30px;
+
+            img {
+              border-radius: 100%;
+            }
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+      }
+
+      //==================> End Instagram Bottom Menu
+    }
+  }
+}

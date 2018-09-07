@@ -1,0 +1,481 @@
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+body {
+  background-color: #ebebeb; }
+
+#bg {
+  position: relative;
+  width: 578px;
+  height: 655px;
+  margin: 0 auto; }
+  #bg #iphone {
+    position: absolute; }
+    #bg #iphone #content {
+      position: absolute;
+      z-index: 2;
+      top: 90px;
+      left: 156px;
+      width: 270px;
+      height: 478px; }
+      #bg #iphone #content #notificationBar {
+        background-color: #f0f0f0;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        padding: 2px 5px; }
+        #bg #iphone #content #notificationBar .left {
+          float: left; }
+          #bg #iphone #content #notificationBar .left ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+            #bg #iphone #content #notificationBar .left ul li {
+              float: left;
+              margin-right: 5px; }
+        #bg #iphone #content #notificationBar .center {
+          float: left;
+          margin-left: 55px; }
+        #bg #iphone #content #notificationBar .right {
+          float: right; }
+        #bg #iphone #content #notificationBar:after {
+          content: '';
+          display: block;
+          clear: both; }
+      #bg #iphone #content #instagramHeader {
+        background-color: #fafafa;
+        box-shadow: 0 2px 2px #dedede; }
+        #bg #iphone #content #instagramHeader #camera {
+          float: left;
+          width: 30px;
+          margin: 10px; }
+        #bg #iphone #content #instagramHeader #instagramText {
+          float: left;
+          font-family: "Pacifico", sans-serif;
+          font-size: 20px;
+          margin-top: 10px; }
+        #bg #iphone #content #instagramHeader #directLogo {
+          float: right;
+          width: 30px;
+          margin: 10px; }
+        #bg #iphone #content #instagramHeader:after {
+          content: '';
+          display: block;
+          clear: both; }
+      #bg #iphone #content #instagramStories {
+        overflow: hidden; }
+        #bg #iphone #content #instagramStories ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 1000px; }
+          #bg #iphone #content #instagramStories ul li {
+            position: relative;
+            float: left;
+            margin-left: 9px;
+            margin-top: 8px; }
+            #bg #iphone #content #instagramStories ul li:nth-child(1) .avatar {
+              border: 0; }
+            #bg #iphone #content #instagramStories ul li .avatar {
+              width: 55px;
+              border-radius: 100%;
+              border: 2px #cf1278 solid; }
+              #bg #iphone #content #instagramStories ul li .avatar img {
+                border-radius: 100%; }
+              #bg #iphone #content #instagramStories ul li .avatar .add {
+                position: absolute;
+                bottom: 14px;
+                right: 4px;
+                color: #3e92e8;
+                font-size: 18px; }
+            #bg #iphone #content #instagramStories ul li .name {
+              font-family: "Roboto", sans-serif;
+              font-size: 14px;
+              text-align: center; }
+          #bg #iphone #content #instagramStories ul:after {
+            content: '';
+            display: block;
+            clear: both; }
+        #bg #iphone #content #instagramStories:after {
+          content: '';
+          background-color: #f1f1f1;
+          height: 1px;
+          margin-top: 5px;
+          display: block;
+          clear: both; }
+      #bg #iphone #content #posts {
+        height: 272px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /* #postMenuOptionsBg{
+          background-color: rgba(0,0,0,.4);
+          position: absolute;
+          z-index: 2;
+        }
+        #postMenuOptions{
+          background-color: #fff;
+          border-radius: 5px;
+          position: absolute;
+          z-index: 3;
+          min-width: 230px;
+          ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+              font-family: $notificationBarFont;
+              font-size: 16px;
+              padding: 5px 10px;
+              &:hover{
+                background-color: #e0e0e0;
+              }
+            }
+          }
+        } */ }
+        #bg #iphone #content #posts .post {
+          position: relative; }
+          #bg #iphone #content #posts .post .title .avatar {
+            float: left;
+            width: 35px;
+            margin: 5px;
+            cursor: pointer; }
+            #bg #iphone #content #posts .post .title .avatar img {
+              border-radius: 100%; }
+          #bg #iphone #content #posts .post .title .pageName {
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            float: left;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 5px;
+            cursor: pointer; }
+          #bg #iphone #content #posts .post .title .menuBtn {
+            float: right;
+            margin: 10px 10px 5px 5px;
+            cursor: pointer; }
+          #bg #iphone #content #posts .post .title::after {
+            content: '';
+            display: block;
+            clear: both; }
+          #bg #iphone #content #posts .post .pContent {
+            position: relative;
+            cursor: pointer; }
+            #bg #iphone #content #posts .post .pContent .postLikeIcon {
+              position: absolute;
+              top: 110px;
+              left: 110px;
+              display: none; }
+            #bg #iphone #content #posts .post .pContent .scale-up-center {
+              -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+              animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+              display: block !important; }
+          #bg #iphone #content #posts .post .underContent .btns .like {
+            float: left;
+            width: 25px;
+            margin: 5px;
+            cursor: pointer; }
+          #bg #iphone #content #posts .post .underContent .btns .scale-up-center {
+            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+          #bg #iphone #content #posts .post .underContent .btns .comments {
+            float: left;
+            width: 25px;
+            margin: 5px; }
+          #bg #iphone #content #posts .post .underContent .btns .forward {
+            float: left;
+            width: 25px;
+            margin: 5px; }
+          #bg #iphone #content #posts .post .underContent .btns .saveToCollection {
+            float: right;
+            width: 25px;
+            margin: 5px; }
+          #bg #iphone #content #posts .post .underContent .btns:after {
+            content: '';
+            display: block;
+            clear: both; }
+          #bg #iphone #content #posts .post .underContent .content {
+            padding: 5px;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px; }
+            #bg #iphone #content #posts .post .underContent .content .likesCount {
+              font-weight: bold; }
+            #bg #iphone #content #posts .post .underContent .content .pageName {
+              font-weight: bold;
+              display: inline; }
+            #bg #iphone #content #posts .post .underContent .content .text {
+              display: inline; }
+            #bg #iphone #content #posts .post .underContent .content .viewComments {
+              color: #a8a8a8;
+              font-size: 14px;
+              cursor: pointer; }
+            #bg #iphone #content #posts .post .underContent .content .someComments ul {
+              list-style: none;
+              margin: 0;
+              padding: 0; }
+              #bg #iphone #content #posts .post .underContent .content .someComments ul li {
+                width: 100%; }
+                #bg #iphone #content #posts .post .underContent .content .someComments ul li .userName {
+                  display: inline;
+                  font-weight: bold;
+                  font-size: 14px; }
+                #bg #iphone #content #posts .post .underContent .content .someComments ul li .comment {
+                  font-size: 14px;
+                  display: inline; }
+                  #bg #iphone #content #posts .post .underContent .content .someComments ul li .comment span {
+                    color: #3395f0; }
+            #bg #iphone #content #posts .post .underContent .content .time {
+              color: #a8a8a8;
+              font-size: 10px; }
+              #bg #iphone #content #posts .post .underContent .content .time span {
+                color: #000; }
+          #bg #iphone #content #posts .post .coments {
+            display: none; }
+      #bg #iphone #content #allComments {
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        background-color: #fff;
+        top: 77px;
+        z-index: 3;
+        display: none; }
+        #bg #iphone #content #allComments .postContent {
+          margin-top: 6px;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px; }
+          #bg #iphone #content #allComments .postContent .avatar {
+            float: left;
+            width: 50px;
+            margin-left: 7px; }
+            #bg #iphone #content #allComments .postContent .avatar img {
+              border-radius: 100%;
+              border: 1px #7b7b7b solid; }
+          #bg #iphone #content #allComments .postContent .content {
+            float: right;
+            width: 213px;
+            padding-left: 10px; }
+            #bg #iphone #content #allComments .postContent .content .pageName {
+              font-weight: bold;
+              display: inline; }
+            #bg #iphone #content #allComments .postContent .content .text {
+              display: inline; }
+          #bg #iphone #content #allComments .postContent:after {
+            content: '';
+            display: block;
+            clear: both; }
+        #bg #iphone #content #allComments hr {
+          margin: 3px 0; }
+        #bg #iphone #content #allComments .comentItems {
+          overflow-y: scroll;
+          height: 275px; }
+          #bg #iphone #content #allComments .comentItems ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+            #bg #iphone #content #allComments .comentItems ul li {
+              margin-top: 10px; }
+              #bg #iphone #content #allComments .comentItems ul li .userAvatar {
+                float: left;
+                width: 40px;
+                margin-top: 8px;
+                margin-left: 8px; }
+                #bg #iphone #content #allComments .comentItems ul li .userAvatar img {
+                  border-radius: 100%;
+                  border: 1px #7b7b7b solid; }
+              #bg #iphone #content #allComments .comentItems ul li .comentContent {
+                position: relative;
+                float: left;
+                padding-left: 10px;
+                width: 222px;
+                font-size: 13px;
+                padding-right: 22px; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent .userName {
+                  font-weight: bold;
+                  display: inline; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent .comment {
+                  display: inline; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .comment span {
+                    color: #3e92e8; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent .like {
+                  float: right;
+                  position: absolute;
+                  top: 15px;
+                  right: 8px;
+                  cursor: pointer; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent .option {
+                  color: #7b7b7b;
+                  font-size: 12px; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .option .time {
+                    display: inline; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .option .d-comments {
+                    display: none; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .option .likes {
+                    display: inline;
+                    font-weight: bold;
+                    margin-left: 10px; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .option .reply {
+                    display: inline;
+                    font-weight: bold;
+                    margin-left: 10px; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent .subCommentsText {
+                  font-family: "Roboto", sans-serif;
+                  font-size: 12px;
+                  color: #7b7b7b;
+                  margin-top: 7px;
+                  cursor: pointer;
+                  display: none; }
+                  #bg #iphone #content #allComments .comentItems ul li .comentContent .subCommentsText::before {
+                    content: '';
+                    height: 1px;
+                    width: 20px;
+                    background-color: #7b7b7b;
+                    float: left;
+                    margin: 9px 5px 0 0; }
+                #bg #iphone #content #allComments .comentItems ul li .comentContent:after {
+                  content: '';
+                  display: block;
+                  clear: both; }
+              #bg #iphone #content #allComments .comentItems ul li .subComments {
+                display: block; }
+                #bg #iphone #content #allComments .comentItems ul li .subComments::before {
+                  content: '';
+                  display: block;
+                  clear: both; }
+                #bg #iphone #content #allComments .comentItems ul li .subComments ul {
+                  list-style: none;
+                  margin: 0 0 0 50px;
+                  padding: 0; }
+                  #bg #iphone #content #allComments .comentItems ul li .subComments ul li {
+                    margin-top: 10px; }
+                    #bg #iphone #content #allComments .comentItems ul li .subComments ul li .userAvatar {
+                      float: left;
+                      width: 35px;
+                      margin: 0; }
+                      #bg #iphone #content #allComments .comentItems ul li .subComments ul li .userAvatar img {
+                        border-radius: 100%;
+                        border: 1px #7b7b7b solid; }
+                    #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent {
+                      position: relative;
+                      float: left;
+                      padding-left: 10px;
+                      width: 185px;
+                      font-size: 13px;
+                      padding-right: 22px; }
+                      #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .userName {
+                        font-weight: bold;
+                        display: inline; }
+                      #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .comment {
+                        display: inline; }
+                        #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .comment span {
+                          color: #3e92e8; }
+                      #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .like {
+                        float: right;
+                        position: absolute;
+                        top: 15px;
+                        right: 8px; }
+                      #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .option {
+                        color: #7b7b7b;
+                        font-size: 12px; }
+                        #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .option .d-comments {
+                          display: none; }
+                        #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .option .time {
+                          display: inline; }
+                        #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .option .likes {
+                          display: inline;
+                          font-weight: bold;
+                          margin-left: 10px; }
+                        #bg #iphone #content #allComments .comentItems ul li .subComments ul li .comentContent .option .reply {
+                          display: inline;
+                          font-weight: bold;
+                          margin-left: 10px; }
+              #bg #iphone #content #allComments .comentItems ul li:after {
+                content: '';
+                display: block;
+                clear: both; }
+        #bg #iphone #content #allComments #addComment {
+          border-top: 1px #a8a8a8 solid;
+          height: 50px; }
+          #bg #iphone #content #allComments #addComment .userAvatar {
+            float: left;
+            margin: 10px 5px 5px 15px;
+            width: 30px; }
+            #bg #iphone #content #allComments #addComment .userAvatar img {
+              border-radius: 100%;
+              border: 1px #7b7b7b solid; }
+          #bg #iphone #content #allComments #addComment input[type=text] {
+            width: 215px;
+            margin: 5px 5px 0 0;
+            height: 40px;
+            border: 0;
+            float: right;
+            font-size: 12px;
+            padding: 0 5px; }
+            #bg #iphone #content #allComments #addComment input[type=text]:focus {
+              border: 0; }
+          #bg #iphone #content #allComments #addComment::after {
+            content: '';
+            display: block;
+            clear: both; }
+      #bg #iphone #content #postMenuOptionsBg {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 100%;
+        height: 434px;
+        display: none; }
+      #bg #iphone #content #postMenuOptions {
+        background-color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 3;
+        min-width: 230px;
+        top: 143px;
+        left: 20px;
+        display: none; }
+        #bg #iphone #content #postMenuOptions ul {
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+          #bg #iphone #content #postMenuOptions ul li {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            padding: 5px 10px; }
+            #bg #iphone #content #postMenuOptions ul li:hover {
+              background-color: #e0e0e0; }
+      #bg #iphone #content #instagramBottomMenu {
+        position: absolute;
+        bottom: 0;
+        box-shadow: 0 -2px 2px #dedede; }
+        #bg #iphone #content #instagramBottomMenu ul {
+          list-style: none;
+          margin: 0;
+          padding: 7px 0; }
+          #bg #iphone #content #instagramBottomMenu ul li {
+            float: left;
+            width: 30px;
+            margin: 0 12px; }
+          #bg #iphone #content #instagramBottomMenu ul #profile {
+            width: 30px; }
+            #bg #iphone #content #instagramBottomMenu ul #profile img {
+              border-radius: 100%; }
+          #bg #iphone #content #instagramBottomMenu ul:after {
+            content: '';
+            display: block;
+            clear: both; }
+
+/*# sourceMappingURL=style.css.map */
