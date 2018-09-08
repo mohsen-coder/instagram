@@ -243,7 +243,7 @@ body {
 
             .postLikeIcon {
               position: absolute;
-              top: 110px;
+              top: 60px;
               left: 110px;
               display: none;
             }
@@ -273,12 +273,14 @@ body {
                 float: left;
                 width: 25px;
                 margin: 5px;
+                cursor: pointer;
               }
 
               .forward {
                 float: left;
                 width: 25px;
                 margin: 5px;
+                cursor: pointer;
               }
 
               .saveToCollection {
@@ -466,7 +468,7 @@ body {
                 }
               }
 
-              .comentContent {
+              .comentContent{
                 position: relative;
                 float: left;
                 padding-left: 10px;
@@ -524,7 +526,7 @@ body {
                   color: #7b7b7b;
                   margin-top: 7px;
                   cursor: pointer;
-                  display: none;
+                  display: block;
 
                   &::before {
                     content: '';
@@ -550,7 +552,7 @@ body {
                   clear: both;
                 }
 
-                display: block;
+                display: none;
 
                 ul {
                   list-style: none;
@@ -722,7 +724,7 @@ body {
         ul {
           list-style: none;
           margin: 0;
-          padding: 7px 0;
+          padding: 5px 0;
 
           li {
             float: left;

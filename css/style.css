@@ -177,7 +177,7 @@ body {
             cursor: pointer; }
             #bg #iphone #content #posts .post .pContent .postLikeIcon {
               position: absolute;
-              top: 110px;
+              top: 60px;
               left: 110px;
               display: none; }
             #bg #iphone #content #posts .post .pContent .scale-up-center {
@@ -195,11 +195,13 @@ body {
           #bg #iphone #content #posts .post .underContent .btns .comments {
             float: left;
             width: 25px;
-            margin: 5px; }
+            margin: 5px;
+            cursor: pointer; }
           #bg #iphone #content #posts .post .underContent .btns .forward {
             float: left;
             width: 25px;
-            margin: 5px; }
+            margin: 5px;
+            cursor: pointer; }
           #bg #iphone #content #posts .post .underContent .btns .saveToCollection {
             float: right;
             width: 25px;
@@ -337,7 +339,7 @@ body {
                   color: #7b7b7b;
                   margin-top: 7px;
                   cursor: pointer;
-                  display: none; }
+                  display: block; }
                   #bg #iphone #content #allComments .comentItems ul li .comentContent .subCommentsText::before {
                     content: '';
                     height: 1px;
@@ -350,7 +352,7 @@ body {
                   display: block;
                   clear: both; }
               #bg #iphone #content #allComments .comentItems ul li .subComments {
-                display: block; }
+                display: none; }
                 #bg #iphone #content #allComments .comentItems ul li .subComments::before {
                   content: '';
                   display: block;
@@ -464,7 +466,7 @@ body {
         #bg #iphone #content #instagramBottomMenu ul {
           list-style: none;
           margin: 0;
-          padding: 7px 0; }
+          padding: 5px 0; }
           #bg #iphone #content #instagramBottomMenu ul li {
             float: left;
             width: 30px;
