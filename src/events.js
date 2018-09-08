@@ -379,13 +379,13 @@ function likeCurrentComment(e){
             return item;
           }
         });
-        console.log('is sub commen?',isSubComment);
+
         if(findUser.isMainComment === 'yes' && isSubComment === 'no'){
           findUser.likes += 1;
           findUser.isAdminLiked = 'yes';
-          console.log('we are here now1');
+
         }else{
-          console.log('we are here now2');
+
           const parenSubComment = sessionStorage.getItem('parenSubComment');
 
           const findUserInParentOfSubComments = postComments.find((item) => {
@@ -408,7 +408,7 @@ function likeCurrentComment(e){
       });
 
     }else{
-      console.log('we are here now0');
+
       i.className = "fas fa-heart";
       i.style.color = "red";
       if(likeCounter.style.display === 'none'){
@@ -449,7 +449,6 @@ function likeCurrentComment(e){
             findUserInSubComments.likes += 1;
             findUserInSubComments.isAdminLiked = 'yes';
         }
-        // console.log(findUser);
         
         localStorage.setItem('posts',JSON.stringify(res));
       });
@@ -496,7 +495,6 @@ function likeCurrentComment(e){
             return item;
           }
         });
-        // console.log(findUserInParentOfSubComments);
         
         findUserInSubComments.likes -= 1;
         findUserInSubComments.isAdminLiked = 'no';
